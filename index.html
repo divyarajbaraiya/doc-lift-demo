@@ -12,643 +12,56 @@
       integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65"
       crossorigin="anonymous"
     />
+
+    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"> -->
     <link rel="stylesheet" href="style.css" />
+
+    <style>
+      .modal {
+        display: none; /* Hidden by default */
+        position: fixed; /* Stay in place */
+        z-index: 1; /* Sit on top */
+        padding-top: 100px; /* Location of the box */
+        left: 0;
+        top: 0;
+        width: 100%; /* Full width */
+        height: 100%; /* Full height */
+        overflow: auto; /* Enable scroll if needed */
+        background-color: rgb(0, 0, 0); /* Fallback color */
+        background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+      }
+
+      /* Modal Content */
+      .modal-content {
+        background-color: #fefefe;
+        margin: auto;
+        padding: 20px;
+        border: 1px solid #888;
+        width: 80%;
+      }
+
+      /* The Close Button */
+      .close {
+        color: #aaaaaa;
+        float: right;
+        font-size: 28px;
+        font-weight: bold;
+        float: right !important;
+      }
+
+      .close:hover,
+      .close:focus {
+        color: #000;
+        text-decoration: none;
+        cursor: pointer;
+      }
+    </style>
   </head>
   <body>
     <div class="event-overview py-4" id="eventOverview">
       <div class="p-container">
         <div class="event-overview--items">
           <div class="row">
-            <!-- Event Block Start -->
-            <div
-              class="event-item col-12 col-xs-6 col-sm-6 col-md-6 col-lg-4 col-xl-3 hoverView"
-            >
-              <div class="event-item--card card p-0">
-                <div class="banner">
-                  <div class="banner--content">
-                    <div class="liveRibbon">
-                      <div class="content">
-                        <i class="fak fa-live"></i>
-                        <span>Live Now</span>
-                      </div>
-                    </div>
-                    <div class="dateBadge">
-                      <div class="content">
-                        <div class="day">
-                          <span>26</span>
-                        </div>
-                        <div class="time">
-                          <span class="month">August</span>
-                          <span class="clock">10:00 AM</span>
-                        </div>
-                        <div class="year">
-                          <span>2023</span>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="category">
-                    <div class="content">
-                      <span>Medical</span>
-                    </div>
-                  </div>
-                </div>
-                <div class="context">
-                  <div class="context--inner">
-                    <div class="header mb-2">
-                      <div class="title">
-                        <h3>7. Berner Therapienetzwerk Parkinson</h3>
-                      </div>
-                    </div>
-                    <div class="desc">
-                      <p id="description" class="text">
-                        <a
-                          class="fr-green fr-strong"
-                          href="http://www.neurologie.insel.ch/fileadmin/Neurologie/Dokumente/Veranstaltungen/Flyer_Berner_Therapienetzwerk_Parkinson_2023.pdf"
-                          rel="noopener noreferrer"
-                          target="_blank"
-                          ><strong>Flyer »</strong></a
-                        >
-                        <a
-                          class="fr-green fr-strong"
-                          href="http://www.neurologie.insel.ch/de/veranstaltungen/details/detail/7-berner-therapienetzwerk-parkinson"
-                          rel="noopener noreferrer"
-                          target="_blank"
-                          ><strong>Weitere Informationen »&nbsp;</strong></a
-                        >
-                      </p>
-                    </div>
-                    <div class="actions">
-                      <div class="showMore"><a href="/#">+ Mehr</a></div>
-                      <div class="registerBtn">
-                        <button
-                          type="button"
-                          class="registerBtn btn btn-primary"
-                        >
-                          Registrieren
-                        </button>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="additional-info">
-                  <div class="additional-info--inner">
-                    <div class="users">
-                      <div class="users-list withShowMore">
-                        <div class="users-list--inner">
-                          <div class="title mb-3">
-                            <h4>
-                              <i class="fak fa-speakers"></i
-                              ><span>Speaker &amp; Moderatoren</span>
-                            </h4>
-                          </div>
-                          <div class="content pl-3">
-                            <div class="user-item">
-                              <div class="user-item--inner">
-                                <a>
-                                  <div class="profile">
-                                    <i
-                                      style="
-                                        background-image: url('https://client-doclift-com.s3.eu-central-1.amazonaws.com/user/20211123095336-deborah-amstutz-619cac1034422376023156.jpeg');
-                                      "
-                                    ></i>
-                                  </div>
-                                  <div class="details">
-                                    <h4
-                                      class="name w-100 d-flex align-items-center"
-                                    >
-                                      <p>Deborah Amstutz</p>
-                                      <div class="user-flag f16 pl-2">
-                                        <div class="flag null"></div>
-                                      </div>
-                                    </h4>
-                                    <span class="job-company"></span>
-                                  </div>
-                                </a>
-                              </div>
-                            </div>
-                            <div class="user-item">
-                              <div class="user-item--inner">
-                                <a>
-                                  <div class="profile">
-                                    <i
-                                      style="
-                                        background-image: url('https://client-doclift-com.s3.eu-central-1.amazonaws.com/user/20230222153153-bally-lia-jpg-63f627590fabb173498186.webp');
-                                      "
-                                    ></i>
-                                  </div>
-                                  <div class="details">
-                                    <h4
-                                      class="name w-100 d-flex align-items-center"
-                                    >
-                                      <p>Prof. Dr. med. Lia Bally</p>
-                                      <div class="user-flag f16 pl-2">
-                                        <div class="flag"></div>
-                                      </div>
-                                    </h4>
-                                    <span class="job-company"
-                                      >Leiterin Ernährungsmedizin und Leiterin
-                                      Forschung</span
-                                    >
-                                  </div>
-                                </a>
-                              </div>
-                            </div>
-                            <div class="user-item">
-                              <div class="user-item--inner">
-                                <a>
-                                  <div class="profile">
-                                    <i
-                                      style="
-                                        background-image: url('https://client-doclift-com.s3.eu-central-1.amazonaws.com/user/20230222153351-download-63f627cf419e5311892598.jpg');
-                                      "
-                                    ></i>
-                                  </div>
-                                  <div class="details">
-                                    <h4
-                                      class="name w-100 d-flex align-items-center"
-                                    >
-                                      <p>Leonie Breuer</p>
-                                      <div class="user-flag f16 pl-2">
-                                        <div class="flag"></div>
-                                      </div>
-                                    </h4>
-                                    <span class="job-company"></span>
-                                  </div>
-                                </a>
-                              </div>
-                            </div>
-                          </div>
-                          <div class="showMore mt-2">
-                            <a href="/#">+ Mehr</a>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="presenters">
-                      <div class="presenters--inner">
-                        <div class="title mb-2">
-                          <h4>
-                            <i class="fak fa-handshake-alt-light"></i
-                            ><span>Organisator</span>
-                          </h4>
-                        </div>
-                        <div class="content pl-4">
-                          <div class="presenterItem d-flex">
-                            <div class="picture pr-3">
-                              <img
-                                src="https://client-doclift-com.s3.eu-central-1.amazonaws.com/container_logo/20221007124839-logoinsel-63400407bfc4d741004760.jpg"
-                              />
-                            </div>
-                            <div class="details">
-                              <div class="name">
-                                <h5>Inselspital Bern</h5>
-                              </div>
-                              <div class="desc">
-                                <p>
-                                  The Inselspital, also named the University
-                                  Hospital of Bern, located in Bern, is one of
-                                  the five university hospitals of Switzerland.
-                                  It is associated with the University of Bern.
-                                  The hospital is operated by a charitable
-                                  foundation established in 1354 through the
-                                  will of Anna Seiler, a wealthy Bernese.
-                                </p>
-                                <div class="showMore mt-1">
-                                  <a href="/#">+ Mehr</a>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <!-- Event Block End -->
-
-            <!-- Event Block Start -->
-            <div
-              class="event-item col-12 col-xs-6 col-sm-6 col-md-6 col-lg-4 col-xl-3 hoverView"
-            >
-              <div class="event-item--card card p-0">
-                <div class="banner">
-                  <div class="banner--content">
-                    <div class="liveRibbon">
-                      <div class="content">
-                        <i class="fak fa-live"></i>
-                        <span>Live Now</span>
-                      </div>
-                    </div>
-                    <div class="dateBadge">
-                      <div class="content">
-                        <div class="day">
-                          <span>26</span>
-                        </div>
-                        <div class="time">
-                          <span class="month">August</span>
-                          <span class="clock">10:00 AM</span>
-                        </div>
-                        <div class="year">
-                          <span>2023</span>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="category">
-                    <div class="content">
-                      <span>Medical</span>
-                    </div>
-                  </div>
-                </div>
-                <div class="context">
-                  <div class="context--inner">
-                    <div class="header mb-2">
-                      <div class="title">
-                        <h3>7. Berner Therapienetzwerk Parkinson</h3>
-                      </div>
-                    </div>
-                    <div class="desc">
-                      <p id="description" class="text">
-                        <a
-                          class="fr-green fr-strong"
-                          href="http://www.neurologie.insel.ch/fileadmin/Neurologie/Dokumente/Veranstaltungen/Flyer_Berner_Therapienetzwerk_Parkinson_2023.pdf"
-                          rel="noopener noreferrer"
-                          target="_blank"
-                          ><strong>Flyer »</strong></a
-                        >
-                        <a
-                          class="fr-green fr-strong"
-                          href="http://www.neurologie.insel.ch/de/veranstaltungen/details/detail/7-berner-therapienetzwerk-parkinson"
-                          rel="noopener noreferrer"
-                          target="_blank"
-                          ><strong>Weitere Informationen »&nbsp;</strong></a
-                        >
-                      </p>
-                    </div>
-                    <div class="actions">
-                      <div class="showMore"><a href="/#">+ Mehr</a></div>
-                      <div class="registerBtn">
-                        <button
-                          type="button"
-                          class="registerBtn btn btn-primary"
-                        >
-                          Registrieren
-                        </button>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="additional-info">
-                  <div class="additional-info--inner">
-                    <div class="users">
-                      <div class="users-list withShowMore">
-                        <div class="users-list--inner">
-                          <div class="title mb-3">
-                            <h4>
-                              <i class="fak fa-speakers"></i
-                              ><span>Speaker &amp; Moderatoren</span>
-                            </h4>
-                          </div>
-                          <div class="content pl-3">
-                            <div class="user-item">
-                              <div class="user-item--inner">
-                                <a>
-                                  <div class="profile">
-                                    <i
-                                      style="
-                                        background-image: url('https://client-doclift-com.s3.eu-central-1.amazonaws.com/user/20211123095336-deborah-amstutz-619cac1034422376023156.jpeg');
-                                      "
-                                    ></i>
-                                  </div>
-                                  <div class="details">
-                                    <h4
-                                      class="name w-100 d-flex align-items-center"
-                                    >
-                                      <p>Deborah Amstutz</p>
-                                      <div class="user-flag f16 pl-2">
-                                        <div class="flag null"></div>
-                                      </div>
-                                    </h4>
-                                    <span class="job-company"></span>
-                                  </div>
-                                </a>
-                              </div>
-                            </div>
-                            <div class="user-item">
-                              <div class="user-item--inner">
-                                <a>
-                                  <div class="profile">
-                                    <i
-                                      style="
-                                        background-image: url('https://client-doclift-com.s3.eu-central-1.amazonaws.com/user/20230222153153-bally-lia-jpg-63f627590fabb173498186.webp');
-                                      "
-                                    ></i>
-                                  </div>
-                                  <div class="details">
-                                    <h4
-                                      class="name w-100 d-flex align-items-center"
-                                    >
-                                      <p>Prof. Dr. med. Lia Bally</p>
-                                      <div class="user-flag f16 pl-2">
-                                        <div class="flag"></div>
-                                      </div>
-                                    </h4>
-                                    <span class="job-company"
-                                      >Leiterin Ernährungsmedizin und Leiterin
-                                      Forschung</span
-                                    >
-                                  </div>
-                                </a>
-                              </div>
-                            </div>
-                            <div class="user-item">
-                              <div class="user-item--inner">
-                                <a>
-                                  <div class="profile">
-                                    <i
-                                      style="
-                                        background-image: url('https://client-doclift-com.s3.eu-central-1.amazonaws.com/user/20230222153351-download-63f627cf419e5311892598.jpg');
-                                      "
-                                    ></i>
-                                  </div>
-                                  <div class="details">
-                                    <h4
-                                      class="name w-100 d-flex align-items-center"
-                                    >
-                                      <p>Leonie Breuer</p>
-                                      <div class="user-flag f16 pl-2">
-                                        <div class="flag"></div>
-                                      </div>
-                                    </h4>
-                                    <span class="job-company"></span>
-                                  </div>
-                                </a>
-                              </div>
-                            </div>
-                          </div>
-                          <div class="showMore mt-2">
-                            <a href="/#">+ Mehr</a>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="presenters">
-                      <div class="presenters--inner">
-                        <div class="title mb-2">
-                          <h4>
-                            <i class="fak fa-handshake-alt-light"></i
-                            ><span>Organisator</span>
-                          </h4>
-                        </div>
-                        <div class="content pl-4">
-                          <div class="presenterItem d-flex">
-                            <div class="picture pr-3">
-                              <img
-                                src="https://client-doclift-com.s3.eu-central-1.amazonaws.com/container_logo/20221007124839-logoinsel-63400407bfc4d741004760.jpg"
-                              />
-                            </div>
-                            <div class="details">
-                              <div class="name">
-                                <h5>Inselspital Bern</h5>
-                              </div>
-                              <div class="desc">
-                                <p>
-                                  The Inselspital, also named the University
-                                  Hospital of Bern, located in Bern, is one of
-                                  the five university hospitals of Switzerland.
-                                  It is associated with the University of Bern.
-                                  The hospital is operated by a charitable
-                                  foundation established in 1354 through the
-                                  will of Anna Seiler, a wealthy Bernese.
-                                </p>
-                                <div class="showMore mt-1">
-                                  <a href="/#">+ Mehr</a>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <!-- Event Block End -->
-
-            <!-- Event Block Start -->
-            <div
-              class="event-item col-12 col-xs-6 col-sm-6 col-md-6 col-lg-4 col-xl-3 hoverView"
-            >
-              <div class="event-item--card card p-0">
-                <div class="banner">
-                  <div class="banner--content">
-                    <div class="liveRibbon">
-                      <div class="content">
-                        <i class="fak fa-live"></i>
-                        <span>Live Now</span>
-                      </div>
-                    </div>
-                    <div class="dateBadge">
-                      <div class="content">
-                        <div class="day">
-                          <span>26</span>
-                        </div>
-                        <div class="time">
-                          <span class="month">August</span>
-                          <span class="clock">10:00 AM</span>
-                        </div>
-                        <div class="year">
-                          <span>2023</span>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="category">
-                    <div class="content">
-                      <span>Medical</span>
-                    </div>
-                  </div>
-                </div>
-                <div class="context">
-                  <div class="context--inner">
-                    <div class="header mb-2">
-                      <div class="title">
-                        <h3>7. Berner Therapienetzwerk Parkinson</h3>
-                      </div>
-                    </div>
-                    <div class="desc">
-                      <p id="description" class="text">
-                        <a
-                          class="fr-green fr-strong"
-                          href="http://www.neurologie.insel.ch/fileadmin/Neurologie/Dokumente/Veranstaltungen/Flyer_Berner_Therapienetzwerk_Parkinson_2023.pdf"
-                          rel="noopener noreferrer"
-                          target="_blank"
-                          ><strong>Flyer »</strong></a
-                        >
-                        <a
-                          class="fr-green fr-strong"
-                          href="http://www.neurologie.insel.ch/de/veranstaltungen/details/detail/7-berner-therapienetzwerk-parkinson"
-                          rel="noopener noreferrer"
-                          target="_blank"
-                          ><strong>Weitere Informationen »&nbsp;</strong></a
-                        >
-                      </p>
-                    </div>
-                    <div class="actions">
-                      <div class="showMore"><a href="/#">+ Mehr</a></div>
-                      <div class="registerBtn">
-                        <button
-                          type="button"
-                          class="registerBtn btn btn-primary"
-                        >
-                          Registrieren
-                        </button>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="additional-info">
-                  <div class="additional-info--inner">
-                    <div class="users">
-                      <div class="users-list withShowMore">
-                        <div class="users-list--inner">
-                          <div class="title mb-3">
-                            <h4>
-                              <i class="fak fa-speakers"></i
-                              ><span>Speaker &amp; Moderatoren</span>
-                            </h4>
-                          </div>
-                          <div class="content pl-3">
-                            <div class="user-item">
-                              <div class="user-item--inner">
-                                <a>
-                                  <div class="profile">
-                                    <i
-                                      style="
-                                        background-image: url('https://client-doclift-com.s3.eu-central-1.amazonaws.com/user/20211123095336-deborah-amstutz-619cac1034422376023156.jpeg');
-                                      "
-                                    ></i>
-                                  </div>
-                                  <div class="details">
-                                    <h4
-                                      class="name w-100 d-flex align-items-center"
-                                    >
-                                      <p>Deborah Amstutz</p>
-                                      <div class="user-flag f16 pl-2">
-                                        <div class="flag null"></div>
-                                      </div>
-                                    </h4>
-                                    <span class="job-company"></span>
-                                  </div>
-                                </a>
-                              </div>
-                            </div>
-                            <div class="user-item">
-                              <div class="user-item--inner">
-                                <a>
-                                  <div class="profile">
-                                    <i
-                                      style="
-                                        background-image: url('https://client-doclift-com.s3.eu-central-1.amazonaws.com/user/20230222153153-bally-lia-jpg-63f627590fabb173498186.webp');
-                                      "
-                                    ></i>
-                                  </div>
-                                  <div class="details">
-                                    <h4
-                                      class="name w-100 d-flex align-items-center"
-                                    >
-                                      <p>Prof. Dr. med. Lia Bally</p>
-                                      <div class="user-flag f16 pl-2">
-                                        <div class="flag"></div>
-                                      </div>
-                                    </h4>
-                                    <span class="job-company"
-                                      >Leiterin Ernährungsmedizin und Leiterin
-                                      Forschung</span
-                                    >
-                                  </div>
-                                </a>
-                              </div>
-                            </div>
-                            <div class="user-item">
-                              <div class="user-item--inner">
-                                <a>
-                                  <div class="profile">
-                                    <i
-                                      style="
-                                        background-image: url('https://client-doclift-com.s3.eu-central-1.amazonaws.com/user/20230222153351-download-63f627cf419e5311892598.jpg');
-                                      "
-                                    ></i>
-                                  </div>
-                                  <div class="details">
-                                    <h4
-                                      class="name w-100 d-flex align-items-center"
-                                    >
-                                      <p>Leonie Breuer</p>
-                                      <div class="user-flag f16 pl-2">
-                                        <div class="flag"></div>
-                                      </div>
-                                    </h4>
-                                    <span class="job-company"></span>
-                                  </div>
-                                </a>
-                              </div>
-                            </div>
-                          </div>
-                          <div class="showMore mt-2">
-                            <a href="/#">+ Mehr</a>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="presenters">
-                      <div class="presenters--inner">
-                        <div class="title mb-2">
-                          <h4>
-                            <i class="fak fa-handshake-alt-light"></i
-                            ><span>Organisator</span>
-                          </h4>
-                        </div>
-                        <div class="content pl-4">
-                          <div class="presenterItem d-flex">
-                            <div class="picture pr-3">
-                              <img
-                                src="https://client-doclift-com.s3.eu-central-1.amazonaws.com/container_logo/20221007124839-logoinsel-63400407bfc4d741004760.jpg"
-                              />
-                            </div>
-                            <div class="details">
-                              <div class="name">
-                                <h5>Inselspital Bern</h5>
-                              </div>
-                              <div class="desc">
-                                <p>
-                                  The Inselspital, also named the University
-                                  Hospital of Bern, located in Bern, is one of
-                                  the five university hospitals of Switzerland.
-                                  It is associated with the University of Bern.
-                                  The hospital is operated by a charitable
-                                  foundation established in 1354 through the
-                                  will of Anna Seiler, a wealthy Bernese.
-                                </p>
-                                <div class="showMore mt-1">
-                                  <a href="/#">+ Mehr</a>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <!-- Event Block End -->
-
             <!-- Event Block Start -->
             <div
               class="event-item col-12 col-xs-6 col-sm-6 col-md-6 col-lg-4 col-xl-3 hoverView"
@@ -906,18 +319,27 @@
                       <div class="title">
                         <h3>Reanimation und Hirntoddiagnostik</h3>
                       </div>
-                      <div class="actions mr-0 ml-auto">
-                        <button
-                          type="button"
-                          class="shareBtn btn btn-secondary"
-                        >
-                          <i class="fak fa-share-alt"></i>
-                        </button>
-                      </div>
                     </div>
+
                     <div class="desc mb-2">
-                      <p id="description" class="text"></p>
+                      <p id="description" class="text">
+                        <a
+                          class="fr-green fr-strong"
+                          href="http://www.neurologie.insel.ch/fileadmin/Neurologie/Dokumente/Veranstaltungen/Flyer_Berner_Therapienetzwerk_Parkinson_2023.pdf"
+                          rel="noopener noreferrer"
+                          target="_blank"
+                          ><strong>Flyer »</strong></a
+                        >
+                        <a
+                          class="fr-green fr-strong"
+                          href="http://www.neurologie.insel.ch/de/veranstaltungen/details/detail/7-berner-therapienetzwerk-parkinson"
+                          rel="noopener noreferrer"
+                          target="_blank"
+                          ><strong>Weitere Informationen »&nbsp;</strong></a
+                        >
+                      </p>
                     </div>
+
                     <div class="info pt-2">
                       <div class="row">
                         <div
@@ -1100,751 +522,11 @@
                                   foundation established in 1354 through the
                                   will of Anna Seiler, a wealthy Bernese.
                                 </p>
-                                <div class="showMore mt-1">
-                                  <a href="/#">+ Mehr</a>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <!-- Course Block End -->
 
-            <!-- Course Block Start -->
-            <div
-              class="course-item col-12 col-sm-6 col-lg-4 col-xl-3 hoverView"
-            >
-              <div class="course-item--card card p-0">
-                <div class="banner">
-                  <div
-                    class="banner--content"
-                    style="
-                      background-image: url('https://neuronews-expertshare-live.s3.eu-central-1.amazonaws.com/el_course/20220807081254-hirntod-62ef57e6eab72008116721.jpg');
-                    "
-                  >
-                    <div class="new-ribbon">
-                      <div class="content"><span>New</span></div>
-                    </div>
-                    <div class="dateBadge">
-                      <div class="content">
-                        <div class="day"><span>07</span></div>
-                        <div class="time">
-                          <span class="month">August</span
-                          ><span class="clock">09:41</span>
-                        </div>
-                        <div class="year"><span>2022</span></div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="category">
-                    <div class="content">
-                      <span>Allgemeine Neurologie</span>
-                    </div>
-                  </div>
-                </div>
-
-                <div class="context">
-                  <div class="context--inner">
-                    <div class="header mb-2">
-                      <div class="title">
-                        <h3>Reanimation und Hirntoddiagnostik</h3>
-                      </div>
-                      <div class="actions mr-0 ml-auto">
-                        <button
-                          type="button"
-                          class="shareBtn btn btn-secondary"
-                        >
-                          <i class="fak fa-share-alt"></i>
-                        </button>
-                      </div>
-                    </div>
-                    <div class="desc mb-2">
-                      <p id="description" class="text"></p>
-                    </div>
-                    <div class="info pt-2">
-                      <div class="row">
-                        <div
-                          class="info--item duration col-auto pl-2 pr-2 pb-2"
-                        >
-                          <div class="content">
-                            <div class="d-flex">
-                              <div class="content--icon">
-                                <i class="fak fa-hourglass"></i>
-                              </div>
-                              <div class="content--desc">
-                                <span class="count"
-                                  ><div class="mb-0">1 Std, 5 Min.</div></span
-                                ><span class="field">Lektionen</span>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                        <div class="info--item exams col-auto pl-2 pr-2 pb-2">
-                          <div class="content">
-                            <div class="d-flex">
-                              <div class="content--icon">
-                                <i class="fak fa-elearning-hat"></i>
-                              </div>
-                              <div class="content--desc">
-                                <span class="count">0</span
-                                ><span class="field">Examen</span>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                        <div class="info--item tasks col-auto pl-2 pb-2">
-                          <div class="content">
-                            <div class="d-flex">
-                              <div class="content--icon">
-                                <i class="fak fa-check-circle-regular"></i>
-                              </div>
-                              <div class="content--desc">
-                                <span class="count">3</span
-                                ><span class="field">Aufgaben</span>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="actions">
-                      <div class="registerBtn">
-                        <button
-                          type="button"
-                          class="registerBtn btn btn-primary"
-                        >
-                          Registrieren
-                        </button>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-                <div class="additional-info">
-                  <div class="additional-info--inner">
-                    <div class="users">
-                      <div class="users-list withShowMore">
-                        <div class="users-list--inner">
-                          <div class="title mb-3">
-                            <h4>
-                              <i class="fak fa-speakers"></i
-                              ><span>Speaker &amp; Moderatoren</span>
-                            </h4>
-                          </div>
-                          <div class="content pl-3">
-                            <div class="user-item">
-                              <div class="user-item--inner">
-                                <a>
-                                  <div class="profile">
-                                    <i
-                                      style="
-                                        background-image: url('https://client-doclift-com.s3.eu-central-1.amazonaws.com/user/20211123095336-deborah-amstutz-619cac1034422376023156.jpeg');
-                                      "
-                                    ></i>
-                                  </div>
-                                  <div class="details">
-                                    <h4
-                                      class="name w-100 d-flex align-items-center"
-                                    >
-                                      <p>Deborah Amstutz</p>
-                                      <div class="user-flag f16 pl-2">
-                                        <div class="flag null"></div>
-                                      </div>
-                                    </h4>
-                                    <span class="job-company"></span>
-                                  </div>
-                                </a>
-                              </div>
-                            </div>
-                            <div class="user-item">
-                              <div class="user-item--inner">
-                                <a>
-                                  <div class="profile">
-                                    <i
-                                      style="
-                                        background-image: url('https://client-doclift-com.s3.eu-central-1.amazonaws.com/user/20230222153153-bally-lia-jpg-63f627590fabb173498186.webp');
-                                      "
-                                    ></i>
-                                  </div>
-                                  <div class="details">
-                                    <h4
-                                      class="name w-100 d-flex align-items-center"
-                                    >
-                                      <p>Prof. Dr. med. Lia Bally</p>
-                                      <div class="user-flag f16 pl-2">
-                                        <div class="flag"></div>
-                                      </div>
-                                    </h4>
-                                    <span class="job-company"
-                                      >Leiterin Ernährungsmedizin und Leiterin
-                                      Forschung</span
-                                    >
-                                  </div>
-                                </a>
-                              </div>
-                            </div>
-                            <div class="user-item">
-                              <div class="user-item--inner">
-                                <a>
-                                  <div class="profile">
-                                    <i
-                                      style="
-                                        background-image: url('https://client-doclift-com.s3.eu-central-1.amazonaws.com/user/20230222153351-download-63f627cf419e5311892598.jpg');
-                                      "
-                                    ></i>
-                                  </div>
-                                  <div class="details">
-                                    <h4
-                                      class="name w-100 d-flex align-items-center"
-                                    >
-                                      <p>Leonie Breuer</p>
-                                      <div class="user-flag f16 pl-2">
-                                        <div class="flag"></div>
-                                      </div>
-                                    </h4>
-                                    <span class="job-company"></span>
-                                  </div>
-                                </a>
-                              </div>
-                            </div>
-                          </div>
-                          <div class="showMore mt-2">
-                            <a href="/#">+ Mehr</a>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="presenters">
-                      <div class="presenters--inner">
-                        <div class="title mb-2">
-                          <h4>
-                            <i class="fak fa-handshake-alt-light"></i
-                            ><span>Organisator</span>
-                          </h4>
-                        </div>
-                        <div class="content pl-4">
-                          <div class="presenterItem d-flex">
-                            <div class="picture pr-3">
-                              <img
-                                src="https://client-doclift-com.s3.eu-central-1.amazonaws.com/container_logo/20221007124839-logoinsel-63400407bfc4d741004760.jpg"
-                              />
-                            </div>
-                            <div class="details">
-                              <div class="name">
-                                <h5>Inselspital Bern</h5>
-                              </div>
-                              <div class="desc">
-                                <p>
-                                  The Inselspital, also named the University
-                                  Hospital of Bern, located in Bern, is one of
-                                  the five university hospitals of Switzerland.
-                                  It is associated with the University of Bern.
-                                  The hospital is operated by a charitable
-                                  foundation established in 1354 through the
-                                  will of Anna Seiler, a wealthy Bernese.
-                                </p>
-                                <div class="showMore mt-1">
-                                  <a href="/#">+ Mehr</a>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <!-- Course Block End -->
-
-            <!-- Course Block Start -->
-            <div
-              class="course-item col-12 col-sm-6 col-lg-4 col-xl-3 hoverView"
-            >
-              <div class="course-item--card card p-0">
-                <div class="banner">
-                  <div
-                    class="banner--content"
-                    style="
-                      background-image: url('https://neuronews-expertshare-live.s3.eu-central-1.amazonaws.com/el_course/20220807081254-hirntod-62ef57e6eab72008116721.jpg');
-                    "
-                  >
-                    <div class="new-ribbon">
-                      <div class="content"><span>New</span></div>
-                    </div>
-                    <div class="dateBadge">
-                      <div class="content">
-                        <div class="day"><span>07</span></div>
-                        <div class="time">
-                          <span class="month">August</span
-                          ><span class="clock">09:41</span>
-                        </div>
-                        <div class="year"><span>2022</span></div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="category">
-                    <div class="content">
-                      <span>Allgemeine Neurologie</span>
-                    </div>
-                  </div>
-                </div>
-
-                <div class="context">
-                  <div class="context--inner">
-                    <div class="header mb-2">
-                      <div class="title">
-                        <h3>Reanimation und Hirntoddiagnostik</h3>
-                      </div>
-                      <div class="actions mr-0 ml-auto">
-                        <button
-                          type="button"
-                          class="shareBtn btn btn-secondary"
-                        >
-                          <i class="fak fa-share-alt"></i>
-                        </button>
-                      </div>
-                    </div>
-                    <div class="desc mb-2">
-                      <p id="description" class="text"></p>
-                    </div>
-                    <div class="info pt-2">
-                      <div class="row">
-                        <div
-                          class="info--item duration col-auto pl-2 pr-2 pb-2"
-                        >
-                          <div class="content">
-                            <div class="d-flex">
-                              <div class="content--icon">
-                                <i class="fak fa-hourglass"></i>
-                              </div>
-                              <div class="content--desc">
-                                <span class="count"
-                                  ><div class="mb-0">1 Std, 5 Min.</div></span
-                                ><span class="field">Lektionen</span>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                        <div class="info--item exams col-auto pl-2 pr-2 pb-2">
-                          <div class="content">
-                            <div class="d-flex">
-                              <div class="content--icon">
-                                <i class="fak fa-elearning-hat"></i>
-                              </div>
-                              <div class="content--desc">
-                                <span class="count">0</span
-                                ><span class="field">Examen</span>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                        <div class="info--item tasks col-auto pl-2 pb-2">
-                          <div class="content">
-                            <div class="d-flex">
-                              <div class="content--icon">
-                                <i class="fak fa-check-circle-regular"></i>
-                              </div>
-                              <div class="content--desc">
-                                <span class="count">3</span
-                                ><span class="field">Aufgaben</span>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="actions">
-                      <div class="registerBtn">
-                        <button
-                          type="button"
-                          class="registerBtn btn btn-primary"
-                        >
-                          Registrieren
-                        </button>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-                <div class="additional-info">
-                  <div class="additional-info--inner">
-                    <div class="users">
-                      <div class="users-list withShowMore">
-                        <div class="users-list--inner">
-                          <div class="title mb-3">
-                            <h4>
-                              <i class="fak fa-speakers"></i
-                              ><span>Speaker &amp; Moderatoren</span>
-                            </h4>
-                          </div>
-                          <div class="content pl-3">
-                            <div class="user-item">
-                              <div class="user-item--inner">
-                                <a>
-                                  <div class="profile">
-                                    <i
-                                      style="
-                                        background-image: url('https://client-doclift-com.s3.eu-central-1.amazonaws.com/user/20211123095336-deborah-amstutz-619cac1034422376023156.jpeg');
-                                      "
-                                    ></i>
-                                  </div>
-                                  <div class="details">
-                                    <h4
-                                      class="name w-100 d-flex align-items-center"
-                                    >
-                                      <p>Deborah Amstutz</p>
-                                      <div class="user-flag f16 pl-2">
-                                        <div class="flag null"></div>
-                                      </div>
-                                    </h4>
-                                    <span class="job-company"></span>
-                                  </div>
-                                </a>
-                              </div>
-                            </div>
-                            <div class="user-item">
-                              <div class="user-item--inner">
-                                <a>
-                                  <div class="profile">
-                                    <i
-                                      style="
-                                        background-image: url('https://client-doclift-com.s3.eu-central-1.amazonaws.com/user/20230222153153-bally-lia-jpg-63f627590fabb173498186.webp');
-                                      "
-                                    ></i>
-                                  </div>
-                                  <div class="details">
-                                    <h4
-                                      class="name w-100 d-flex align-items-center"
-                                    >
-                                      <p>Prof. Dr. med. Lia Bally</p>
-                                      <div class="user-flag f16 pl-2">
-                                        <div class="flag"></div>
-                                      </div>
-                                    </h4>
-                                    <span class="job-company"
-                                      >Leiterin Ernährungsmedizin und Leiterin
-                                      Forschung</span
-                                    >
-                                  </div>
-                                </a>
-                              </div>
-                            </div>
-                            <div class="user-item">
-                              <div class="user-item--inner">
-                                <a>
-                                  <div class="profile">
-                                    <i
-                                      style="
-                                        background-image: url('https://client-doclift-com.s3.eu-central-1.amazonaws.com/user/20230222153351-download-63f627cf419e5311892598.jpg');
-                                      "
-                                    ></i>
-                                  </div>
-                                  <div class="details">
-                                    <h4
-                                      class="name w-100 d-flex align-items-center"
-                                    >
-                                      <p>Leonie Breuer</p>
-                                      <div class="user-flag f16 pl-2">
-                                        <div class="flag"></div>
-                                      </div>
-                                    </h4>
-                                    <span class="job-company"></span>
-                                  </div>
-                                </a>
-                              </div>
-                            </div>
-                          </div>
-                          <div class="showMore mt-2">
-                            <a href="/#">+ Mehr</a>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="presenters">
-                      <div class="presenters--inner">
-                        <div class="title mb-2">
-                          <h4>
-                            <i class="fak fa-handshake-alt-light"></i
-                            ><span>Organisator</span>
-                          </h4>
-                        </div>
-                        <div class="content pl-4">
-                          <div class="presenterItem d-flex">
-                            <div class="picture pr-3">
-                              <img
-                                src="https://client-doclift-com.s3.eu-central-1.amazonaws.com/container_logo/20221007124839-logoinsel-63400407bfc4d741004760.jpg"
-                              />
-                            </div>
-                            <div class="details">
-                              <div class="name">
-                                <h5>Inselspital Bern</h5>
-                              </div>
-                              <div class="desc">
-                                <p>
-                                  The Inselspital, also named the University
-                                  Hospital of Bern, located in Bern, is one of
-                                  the five university hospitals of Switzerland.
-                                  It is associated with the University of Bern.
-                                  The hospital is operated by a charitable
-                                  foundation established in 1354 through the
-                                  will of Anna Seiler, a wealthy Bernese.
-                                </p>
-                                <div class="showMore mt-1">
-                                  <a href="/#">+ Mehr</a>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <!-- Course Block End -->
-
-            <!-- Course Block Start -->
-            <div
-              class="course-item col-12 col-sm-6 col-lg-4 col-xl-3 hoverView"
-            >
-              <div class="course-item--card card p-0">
-                <div class="banner">
-                  <div
-                    class="banner--content"
-                    style="
-                      background-image: url('https://neuronews-expertshare-live.s3.eu-central-1.amazonaws.com/el_course/20220807081254-hirntod-62ef57e6eab72008116721.jpg');
-                    "
-                  >
-                    <div class="new-ribbon">
-                      <div class="content"><span>New</span></div>
-                    </div>
-                    <div class="dateBadge">
-                      <div class="content">
-                        <div class="day"><span>07</span></div>
-                        <div class="time">
-                          <span class="month">August</span
-                          ><span class="clock">09:41</span>
-                        </div>
-                        <div class="year"><span>2022</span></div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="category">
-                    <div class="content">
-                      <span>Allgemeine Neurologie</span>
-                    </div>
-                  </div>
-                </div>
-
-                <div class="context">
-                  <div class="context--inner">
-                    <div class="header mb-2">
-                      <div class="title">
-                        <h3>Reanimation und Hirntoddiagnostik</h3>
-                      </div>
-                      <div class="actions mr-0 ml-auto">
-                        <button
-                          type="button"
-                          class="shareBtn btn btn-secondary"
-                        >
-                          <i class="fak fa-share-alt"></i>
-                        </button>
-                      </div>
-                    </div>
-                    <div class="desc mb-2">
-                      <p id="description" class="text"></p>
-                    </div>
-                    <div class="info pt-2">
-                      <div class="row">
-                        <div
-                          class="info--item duration col-auto pl-2 pr-2 pb-2"
-                        >
-                          <div class="content">
-                            <div class="d-flex">
-                              <div class="content--icon">
-                                <i class="fak fa-hourglass"></i>
-                              </div>
-                              <div class="content--desc">
-                                <span class="count"
-                                  ><div class="mb-0">1 Std, 5 Min.</div></span
-                                ><span class="field">Lektionen</span>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                        <div class="info--item exams col-auto pl-2 pr-2 pb-2">
-                          <div class="content">
-                            <div class="d-flex">
-                              <div class="content--icon">
-                                <i class="fak fa-elearning-hat"></i>
-                              </div>
-                              <div class="content--desc">
-                                <span class="count">0</span
-                                ><span class="field">Examen</span>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                        <div class="info--item tasks col-auto pl-2 pb-2">
-                          <div class="content">
-                            <div class="d-flex">
-                              <div class="content--icon">
-                                <i class="fak fa-check-circle-regular"></i>
-                              </div>
-                              <div class="content--desc">
-                                <span class="count">3</span
-                                ><span class="field">Aufgaben</span>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="actions">
-                      <div class="registerBtn">
-                        <button
-                          type="button"
-                          class="registerBtn btn btn-primary"
-                        >
-                          Registrieren
-                        </button>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-                <div class="additional-info">
-                  <div class="additional-info--inner">
-                    <div class="users">
-                      <div class="users-list withShowMore">
-                        <div class="users-list--inner">
-                          <div class="title mb-3">
-                            <h4>
-                              <i class="fak fa-speakers"></i
-                              ><span>Speaker &amp; Moderatoren</span>
-                            </h4>
-                          </div>
-                          <div class="content pl-3">
-                            <div class="user-item">
-                              <div class="user-item--inner">
-                                <a>
-                                  <div class="profile">
-                                    <i
-                                      style="
-                                        background-image: url('https://client-doclift-com.s3.eu-central-1.amazonaws.com/user/20211123095336-deborah-amstutz-619cac1034422376023156.jpeg');
-                                      "
-                                    ></i>
-                                  </div>
-                                  <div class="details">
-                                    <h4
-                                      class="name w-100 d-flex align-items-center"
-                                    >
-                                      <p>Deborah Amstutz</p>
-                                      <div class="user-flag f16 pl-2">
-                                        <div class="flag null"></div>
-                                      </div>
-                                    </h4>
-                                    <span class="job-company"></span>
-                                  </div>
-                                </a>
-                              </div>
-                            </div>
-                            <div class="user-item">
-                              <div class="user-item--inner">
-                                <a>
-                                  <div class="profile">
-                                    <i
-                                      style="
-                                        background-image: url('https://client-doclift-com.s3.eu-central-1.amazonaws.com/user/20230222153153-bally-lia-jpg-63f627590fabb173498186.webp');
-                                      "
-                                    ></i>
-                                  </div>
-                                  <div class="details">
-                                    <h4
-                                      class="name w-100 d-flex align-items-center"
-                                    >
-                                      <p>Prof. Dr. med. Lia Bally</p>
-                                      <div class="user-flag f16 pl-2">
-                                        <div class="flag"></div>
-                                      </div>
-                                    </h4>
-                                    <span class="job-company"
-                                      >Leiterin Ernährungsmedizin und Leiterin
-                                      Forschung</span
-                                    >
-                                  </div>
-                                </a>
-                              </div>
-                            </div>
-                            <div class="user-item">
-                              <div class="user-item--inner">
-                                <a>
-                                  <div class="profile">
-                                    <i
-                                      style="
-                                        background-image: url('https://client-doclift-com.s3.eu-central-1.amazonaws.com/user/20230222153351-download-63f627cf419e5311892598.jpg');
-                                      "
-                                    ></i>
-                                  </div>
-                                  <div class="details">
-                                    <h4
-                                      class="name w-100 d-flex align-items-center"
-                                    >
-                                      <p>Leonie Breuer</p>
-                                      <div class="user-flag f16 pl-2">
-                                        <div class="flag"></div>
-                                      </div>
-                                    </h4>
-                                    <span class="job-company"></span>
-                                  </div>
-                                </a>
-                              </div>
-                            </div>
-                          </div>
-                          <div class="showMore mt-2">
-                            <a href="/#">+ Mehr</a>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="presenters">
-                      <div class="presenters--inner">
-                        <div class="title mb-2">
-                          <h4>
-                            <i class="fak fa-handshake-alt-light"></i
-                            ><span>Organisator</span>
-                          </h4>
-                        </div>
-                        <div class="content pl-4">
-                          <div class="presenterItem d-flex">
-                            <div class="picture pr-3">
-                              <img
-                                src="https://client-doclift-com.s3.eu-central-1.amazonaws.com/container_logo/20221007124839-logoinsel-63400407bfc4d741004760.jpg"
-                              />
-                            </div>
-                            <div class="details">
-                              <div class="name">
-                                <h5>Inselspital Bern</h5>
-                              </div>
-                              <div class="desc">
-                                <p>
-                                  The Inselspital, also named the University
-                                  Hospital of Bern, located in Bern, is one of
-                                  the five university hospitals of Switzerland.
-                                  It is associated with the University of Bern.
-                                  The hospital is operated by a charitable
-                                  foundation established in 1354 through the
-                                  will of Anna Seiler, a wealthy Bernese.
-                                </p>
-                                <div class="showMore mt-1">
+                                <div
+                                  id="course-right-description-more"
+                                  class="showMore mt-1"
+                                >
                                   <a href="/#">+ Mehr</a>
                                 </div>
                               </div>
@@ -1862,5 +544,138 @@
         </div>
       </div>
     </div>
+
+    <!-- The Modal Start -->
+    <div id="myModal" class="modal">
+      <div class="modal-content">
+        <div>
+          <span class="close">×</span>
+        </div>
+
+        <h5>Inselspital Bern</h5>
+        <div class="content pl-3 row">
+          <div class="user-item col-3">
+            <div class="user-item--inner">
+              <a
+                ><div class="profile">
+                  <i
+                    style="
+                      background-image: url('https://client-doclift-com.s3.eu-central-1.amazonaws.com/user/20211123095336-deborah-amstutz-619cac1034422376023156.jpeg');
+                    "
+                  ></i>
+                </div>
+                <div class="details">
+                  <h4 class="name w-100 d-flex align-items-center">
+                    <p>Deborah Amstutz</p>
+                    <div class="user-flag f16 pl-2">
+                      <div class="flag null"></div>
+                    </div>
+                  </h4>
+                  <span class="job-company"></span></div
+              ></a>
+            </div>
+          </div>
+          <div class="user-item col-3">
+            <div class="user-item--inner">
+              <a
+                ><div class="profile">
+                  <i
+                    style="
+                      background-image: url('https://client-doclift-com.s3.eu-central-1.amazonaws.com/user/20230222153153-bally-lia-jpg-63f627590fabb173498186.webp');
+                    "
+                  ></i>
+                </div>
+                <div class="details">
+                  <h4 class="name w-100 d-flex align-items-center">
+                    <p>Prof. Dr. med. Lia Bally</p>
+                    <div class="user-flag f16 pl-2">
+                      <div class="flag"></div>
+                    </div>
+                  </h4>
+                  <span class="job-company"
+                    ><font style="vertical-align: inherit"
+                      ><font style="vertical-align: inherit"
+                        >Head of Nutritional Medicine and Head of Research</font
+                      ></font
+                    ></span
+                  >
+                </div></a
+              >
+            </div>
+          </div>
+          <div class="user-item col-3">
+            <div class="user-item--inner">
+              <a
+                ><div class="profile">
+                  <i
+                    style="
+                      background-image: url('https://client-doclift-com.s3.eu-central-1.amazonaws.com/user/20230222153351-download-63f627cf419e5311892598.jpg');
+                    "
+                  ></i>
+                </div>
+                <div class="details">
+                  <h4 class="name w-100 d-flex align-items-center">
+                    <p>
+                      <font style="vertical-align: inherit"
+                        ><font style="vertical-align: inherit"
+                          >Leonie
+                        </font></font
+                      >
+                      <font style="vertical-align: inherit"
+                        ><font style="vertical-align: inherit"
+                          >Breuer</font
+                        ></font
+                      >
+                    </p>
+                    <div class="user-flag f16 pl-2">
+                      <div class="flag"></div>
+                    </div>
+                  </h4>
+                  <span class="job-company"></span></div
+              ></a>
+            </div>
+          </div>
+        </div>
+        <!-- <p>
+          The Inselspital, also named the University Hospital of Bern, located
+          in Bern, is one of the five university hospitals of Switzerland. It is
+          associated with the University of Bern. The hospital is operated by a
+          charitable foundation established in 1354 through the will of Anna
+          Seiler, a wealthy Bernese.
+        </p> -->
+      </div>
+    </div>
+    <!-- The Modal End -->
+
+    <script>
+      // Get the modal
+      var modal = document.getElementById("myModal");
+
+      // Get the button that opens the modal
+      var btn = document.getElementById("course-right-description-more");
+
+      // Get the <span> element that closes the modal
+      var span = document.getElementsByClassName("close")[0];
+
+      // When the user clicks the button, open the modal
+      btn.onclick = function (e) {
+        console.log(e);
+
+        event.preventDefault();
+        modal.style.display = "block";
+      };
+
+      // When the user clicks on <span> (x), close the modal
+      span.onclick = function () {
+        modal.style.display = "none";
+      };
+
+      // When the user clicks anywhere outside of the modal, close it
+      window.onclick = function (event) {
+        if (event.target == modal) {
+          modal.style.display = "none";
+        }
+      };
+    </script>
   </body>
 </html>
