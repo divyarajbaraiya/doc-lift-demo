@@ -1,7 +1,4 @@
 :root {
-  --font-family-title: "grotesque";
-  --font-family-body: "grotesque";
-  --font-family-button: "grotesque";
   --primary: #009870;
   --primary-10: #00987010;
   --primary-15: #00987015;
@@ -53,7 +50,7 @@
   --card-box-shadow-color: #44444430;
   --card-divider-color: #44444420; */
   --card-compact-heading-color: #444444;
-  --card-background-color: #fff;
+  --card-background-color: #fafafaff;
   --card-text-color: #677078;
   --card-second-text-color: #677078;
   --card-box-shadow-color: #6770781a;
@@ -109,6 +106,10 @@
   font-style: normal;
   src: url(https://kit.fontawesome.com/5a850a28be/12734495/kit-upload.woff2)
     format("woff2");
+}
+
+body {
+  font-family: "DM Sans", Helvetica, Arial, Lucida, sans-serif;
 }
 
 .public-container .event-overview {
@@ -173,6 +174,11 @@
 }
 .event-item--card {
   cursor: pointer;
+  border: initial !important;
+  background-color: var(--card-background-color);
+  border-radius: var(--card-border-radius);
+  box-shadow: 0 3px 9px var(--card-box-shadow-color);
+  color: var(--card-text-color);
 }
 .event-item--card .banner--content {
   position: relative;
@@ -240,7 +246,7 @@
   line-height: normal;
 }
 .event-item--card .banner--content .dateBadge .content .day span {
-  padding-top: 7px;
+  padding-top: 3px;
   font-size: 2.3rem;
   font-weight: 900;
   color: var(--primary);
@@ -595,7 +601,7 @@
   border-right: 3px;
   border-style: solid !important;
 }
-@media (max-width: 992px) {
+@media (max-width: 687px) {
   .event-item.hoverView .event-item--card:before {
     border-bottom: 0 !important;
     border-right: 3px !important;
@@ -617,43 +623,28 @@
     border-right: 3px !important;
   }
 }
-@media (min-width: 992px) and (max-width: 1498px) {
+@media (min-width: 687px) and (max-width: 991px) {
   .event-item.hoverView:nth-child(2) .event-item--card:hover,
-  .event-item.hoverView:nth-child(3) .event-item--card:hover,
-  .event-item.hoverView:nth-child(5) .event-item--card:hover,
-  .event-item.hoverView:nth-child(6) .event-item--card:hover,
-  .event-item.hoverView:nth-child(8) .event-item--card:hover {
+  .event-item.hoverView:nth-child(4) .event-item--card:hover {
     border-radius: 0 !important;
   }
   .event-item.hoverView:nth-child(2) .event-item--card:hover:before,
-  .event-item.hoverView:nth-child(3) .event-item--card:hover:before,
-  .event-item.hoverView:nth-child(5) .event-item--card:hover:before,
-  .event-item.hoverView:nth-child(6) .event-item--card:hover:before,
-  .event-item.hoverView:nth-child(8) .event-item--card:hover:before {
+  .event-item.hoverView:nth-child(4) .event-item--card:hover:before {
     border-bottom: 3px;
     border-right: 3px;
     border-left: 0;
     border-style: solid !important;
   }
   .event-item.hoverView:nth-child(2) .event-item--card:hover .banner--content,
-  .event-item.hoverView:nth-child(3) .event-item--card:hover .banner--content,
-  .event-item.hoverView:nth-child(5) .event-item--card:hover .banner--content,
-  .event-item.hoverView:nth-child(6) .event-item--card:hover .banner--content,
-  .event-item.hoverView:nth-child(8) .event-item--card:hover .banner--content {
+  .event-item.hoverView:nth-child(4) .event-item--card:hover .banner--content {
     border-radius: 0;
   }
   .event-item.hoverView:nth-child(2) .event-item--card:hover .banner .category,
-  .event-item.hoverView:nth-child(3) .event-item--card:hover .banner .category,
-  .event-item.hoverView:nth-child(5) .event-item--card:hover .banner .category,
-  .event-item.hoverView:nth-child(6) .event-item--card:hover .banner .category,
-  .event-item.hoverView:nth-child(8) .event-item--card:hover .banner .category {
+  .event-item.hoverView:nth-child(4) .event-item--card:hover .banner .category {
     z-index: 2;
   }
   .event-item.hoverView:nth-child(2) .event-item--card:hover .additional-info,
-  .event-item.hoverView:nth-child(3) .event-item--card:hover .additional-info,
-  .event-item.hoverView:nth-child(5) .event-item--card:hover .additional-info,
-  .event-item.hoverView:nth-child(6) .event-item--card:hover .additional-info,
-  .event-item.hoverView:nth-child(8) .event-item--card:hover .additional-info {
+  .event-item.hoverView:nth-child(4) .event-item--card:hover .additional-info {
     left: auto !important;
     right: 100%;
     border-color: var(--primary) !important;
@@ -663,44 +654,67 @@
     border-right: 0;
   }
   .event-item.hoverView:nth-child(2) .event-item--card .additional-info,
+  .event-item.hoverView:nth-child(4) .event-item--card .additional-info {
+    left: auto !important;
+    right: 100%;
+  }
+}
+@media (min-width: 992px) and (max-width: 1498px) {
+  .event-item.hoverView:nth-child(3) .event-item--card:hover,
+  .event-item.hoverView:nth-child(6) .event-item--card:hover {
+    border-radius: 0 !important;
+  }
+  .event-item.hoverView:nth-child(3) .event-item--card:hover:before,
+  .event-item.hoverView:nth-child(6) .event-item--card:hover:before {
+    border-bottom: 3px;
+    border-right: 3px;
+    border-left: 0;
+    border-style: solid !important;
+  }
+  .event-item.hoverView:nth-child(3) .event-item--card:hover .banner--content,
+  .event-item.hoverView:nth-child(6) .event-item--card:hover .banner--content {
+    border-radius: 0;
+  }
+  .event-item.hoverView:nth-child(3) .event-item--card:hover .banner .category,
+  .event-item.hoverView:nth-child(6) .event-item--card:hover .banner .category {
+    z-index: 2;
+  }
+  .event-item.hoverView:nth-child(3) .event-item--card:hover .additional-info,
+  .event-item.hoverView:nth-child(6) .event-item--card:hover .additional-info {
+    left: auto !important;
+    right: 100%;
+    border-color: var(--primary) !important;
+    border-bottom: 3px;
+    border-top: 3px;
+    border-left: 3px;
+    border-right: 0;
+  }
   .event-item.hoverView:nth-child(3) .event-item--card .additional-info,
-  .event-item.hoverView:nth-child(5) .event-item--card .additional-info,
-  .event-item.hoverView:nth-child(6) .event-item--card .additional-info,
-  .event-item.hoverView:nth-child(8) .event-item--card .additional-info {
+  .event-item.hoverView:nth-child(6) .event-item--card .additional-info {
     left: auto !important;
     right: 100%;
   }
 }
 @media (min-width: 1499px) {
-  .event-item.hoverView:nth-child(3) .event-item--card:hover,
   .event-item.hoverView:nth-child(4) .event-item--card:hover,
-  .event-item.hoverView:nth-child(7) .event-item--card:hover,
   .event-item.hoverView:nth-child(8) .event-item--card:hover {
     border-radius: 0 !important;
   }
-  .event-item.hoverView:nth-child(3) .event-item--card:hover:before,
   .event-item.hoverView:nth-child(4) .event-item--card:hover:before,
-  .event-item.hoverView:nth-child(7) .event-item--card:hover:before,
   .event-item.hoverView:nth-child(8) .event-item--card:hover:before {
     border-bottom: 3px;
     border-right: 3px;
     border-left: 0;
   }
-  .event-item.hoverView:nth-child(3) .event-item--card:hover .banner--content,
   .event-item.hoverView:nth-child(4) .event-item--card:hover .banner--content,
-  .event-item.hoverView:nth-child(7) .event-item--card:hover .banner--content,
   .event-item.hoverView:nth-child(8) .event-item--card:hover .banner--content {
     border-radius: 0;
   }
-  .event-item.hoverView:nth-child(3) .event-item--card:hover .banner .category,
   .event-item.hoverView:nth-child(4) .event-item--card:hover .banner .category,
-  .event-item.hoverView:nth-child(7) .event-item--card:hover .banner .category,
   .event-item.hoverView:nth-child(8) .event-item--card:hover .banner .category {
     z-index: 2;
   }
-  .event-item.hoverView:nth-child(3) .event-item--card:hover .additional-info,
   .event-item.hoverView:nth-child(4) .event-item--card:hover .additional-info,
-  .event-item.hoverView:nth-child(7) .event-item--card:hover .additional-info,
   .event-item.hoverView:nth-child(8) .event-item--card:hover .additional-info {
     left: auto !important;
     right: 100%;
@@ -711,9 +725,7 @@
     border-right: 0;
     border-style: solid !important;
   }
-  .event-item.hoverView:nth-child(3) .event-item--card .additional-info,
   .event-item.hoverView:nth-child(4) .event-item--card .additional-info,
-  .event-item.hoverView:nth-child(7) .event-item--card .additional-info,
   .event-item.hoverView:nth-child(8) .event-item--card .additional-info {
     left: auto !important;
     right: 100%;
@@ -856,7 +868,6 @@
   align-items: center;
   justify-content: center;
   height: 36px;
-  font-family: var(--font-family-button);
   padding: 0 20px !important;
   font-size: 1rem !important;
   font-weight: 500 !important;
@@ -908,6 +919,11 @@
 }
 .course-item--card {
   cursor: pointer;
+  border: initial !important;
+  background-color: var(--card-background-color);
+  border-radius: var(--card-border-radius);
+  box-shadow: 0 3px 9px var(--card-box-shadow-color);
+  color: var(--card-text-color);
 }
 .course-item--card .banner--content {
   position: relative;
@@ -974,7 +990,7 @@
   line-height: normal;
 }
 .course-item--card .banner--content .dateBadge .content .day span {
-  padding-top: 7px;
+  padding-top: 3px;
   font-size: 2.3rem;
   font-weight: 900;
   color: var(--primary);
@@ -1370,7 +1386,7 @@
   border-right: 3px;
   border-style: solid !important;
 }
-@media (max-width: 992px) {
+@media (max-width: 687px) {
   .course-item.hoverView .course-item--card:before {
     border-bottom: 0 !important;
     border-right: 3px !important;
@@ -1392,60 +1408,36 @@
     border-right: 3px !important;
   }
 }
-@media (min-width: 992px) and (max-width: 1498px) {
+@media (min-width: 687px) and (max-width: 991px) {
   .course-item.hoverView:nth-child(2) .course-item--card:hover,
-  .course-item.hoverView:nth-child(3) .course-item--card:hover,
-  .course-item.hoverView:nth-child(5) .course-item--card:hover,
-  .course-item.hoverView:nth-child(6) .course-item--card:hover,
-  .course-item.hoverView:nth-child(8) .course-item--card:hover {
+  .course-item.hoverView:nth-child(4) .course-item--card:hover {
     border-radius: 0 !important;
   }
   .course-item.hoverView:nth-child(2) .course-item--card:hover:before,
-  .course-item.hoverView:nth-child(3) .course-item--card:hover:before,
-  .course-item.hoverView:nth-child(5) .course-item--card:hover:before,
-  .course-item.hoverView:nth-child(6) .course-item--card:hover:before,
-  .course-item.hoverView:nth-child(8) .course-item--card:hover:before {
+  .course-item.hoverView:nth-child(4) .course-item--card:hover:before {
     border-bottom: 3px;
     border-right: 3px;
     border-left: 0;
     border-style: solid !important;
   }
   .course-item.hoverView:nth-child(2) .course-item--card:hover .banner--content,
-  .course-item.hoverView:nth-child(3) .course-item--card:hover .banner--content,
-  .course-item.hoverView:nth-child(5) .course-item--card:hover .banner--content,
-  .course-item.hoverView:nth-child(6) .course-item--card:hover .banner--content,
-  .course-item.hoverView:nth-child(8)
+  .course-item.hoverView:nth-child(4)
     .course-item--card:hover
     .banner--content {
     border-radius: 0;
   }
   .course-item.hoverView:nth-child(2)
-    .course-item--card:hover
-    .banner
-    .category,
-  .course-item.hoverView:nth-child(3)
-    .course-item--card:hover
-    .banner
-    .category,
-  .course-item.hoverView:nth-child(5)
-    .course-item--card:hover
+    .course-item--card:hove4
     .banner
     .category,
   .course-item.hoverView:nth-child(6)
-    .course-item--card:hover
-    .banner
-    .category,
-  .course-item.hoverView:nth-child(8)
     .course-item--card:hover
     .banner
     .category {
     z-index: 2;
   }
   .course-item.hoverView:nth-child(2) .course-item--card:hover .additional-info,
-  .course-item.hoverView:nth-child(3) .course-item--card:hover .additional-info,
-  .course-item.hoverView:nth-child(5) .course-item--card:hover .additional-info,
-  .course-item.hoverView:nth-child(6) .course-item--card:hover .additional-info,
-  .course-item.hoverView:nth-child(8)
+  .course-item.hoverView:nth-child(4)
     .course-item--card:hover
     .additional-info {
     left: auto !important;
@@ -1457,33 +1449,25 @@
     border-right: 0;
   }
   .course-item.hoverView:nth-child(2) .course-item--card .additional-info,
-  .course-item.hoverView:nth-child(3) .course-item--card .additional-info,
-  .course-item.hoverView:nth-child(5) .course-item--card .additional-info,
-  .course-item.hoverView:nth-child(6) .course-item--card .additional-info,
-  .course-item.hoverView:nth-child(8) .course-item--card .additional-info {
+  .course-item.hoverView:nth-child(4) .course-item--card .additional-info {
     left: auto !important;
     right: 100%;
   }
 }
-@media (min-width: 1499px) {
+@media (min-width: 992px) and (max-width: 1498px) {
   .course-item.hoverView:nth-child(3) .course-item--card:hover,
-  .course-item.hoverView:nth-child(4) .course-item--card:hover,
-  .course-item.hoverView:nth-child(7) .course-item--card:hover,
-  .course-item.hoverView:nth-child(8) .course-item--card:hover {
+  .course-item.hoverView:nth-child(6) .course-item--card:hover {
     border-radius: 0 !important;
   }
   .course-item.hoverView:nth-child(3) .course-item--card:hover:before,
-  .course-item.hoverView:nth-child(4) .course-item--card:hover:before,
-  .course-item.hoverView:nth-child(7) .course-item--card:hover:before,
-  .course-item.hoverView:nth-child(8) .course-item--card:hover:before {
+  .course-item.hoverView:nth-child(6) .course-item--card:hover:before {
     border-bottom: 3px;
     border-right: 3px;
     border-left: 0;
+    border-style: solid !important;
   }
   .course-item.hoverView:nth-child(3) .course-item--card:hover .banner--content,
-  .course-item.hoverView:nth-child(4) .course-item--card:hover .banner--content,
-  .course-item.hoverView:nth-child(7) .course-item--card:hover .banner--content,
-  .course-item.hoverView:nth-child(8)
+  .course-item.hoverView:nth-child(6)
     .course-item--card:hover
     .banner--content {
     border-radius: 0;
@@ -1492,11 +1476,48 @@
     .course-item--card:hover
     .banner
     .category,
-  .course-item.hoverView:nth-child(4)
+  .course-item.hoverView:nth-child(6)
     .course-item--card:hover
     .banner
-    .category,
-  .course-item.hoverView:nth-child(7)
+    .category {
+    z-index: 2;
+  }
+  .course-item.hoverView:nth-child(3) .course-item--card:hover .additional-info,
+  .course-item.hoverView:nth-child(6)
+    .course-item--card:hover
+    .additional-info {
+    left: auto !important;
+    right: 100%;
+    border-color: var(--primary) !important;
+    border-bottom: 3px;
+    border-top: 3px;
+    border-left: 3px;
+    border-right: 0;
+  }
+  .course-item.hoverView:nth-child(3) .course-item--card .additional-info,
+  .course-item.hoverView:nth-child(6) .course-item--card .additional-info {
+    left: auto !important;
+    right: 100%;
+  }
+}
+@media (min-width: 1499px) {
+  .course-item.hoverView:nth-child(4) .course-item--card:hover,
+  .course-item.hoverView:nth-child(8) .course-item--card:hover {
+    border-radius: 0 !important;
+  }
+  .course-item.hoverView:nth-child(4) .course-item--card:hover:before,
+  .course-item.hoverView:nth-child(8) .course-item--card:hover:before {
+    border-bottom: 3px;
+    border-right: 3px;
+    border-left: 0;
+  }
+  .course-item.hoverView:nth-child(4) .course-item--card:hover .banner--content,
+  .course-item.hoverView:nth-child(8)
+    .course-item--card:hover
+    .banner--content {
+    border-radius: 0;
+  }
+  .course-item.hoverView:nth-child(4)
     .course-item--card:hover
     .banner
     .category,
@@ -1506,9 +1527,7 @@
     .category {
     z-index: 2;
   }
-  .course-item.hoverView:nth-child(3) .course-item--card:hover .additional-info,
   .course-item.hoverView:nth-child(4) .course-item--card:hover .additional-info,
-  .course-item.hoverView:nth-child(7) .course-item--card:hover .additional-info,
   .course-item.hoverView:nth-child(8)
     .course-item--card:hover
     .additional-info {
@@ -1521,9 +1540,7 @@
     border-right: 0;
     border-style: solid !important;
   }
-  .course-item.hoverView:nth-child(3) .course-item--card .additional-info,
   .course-item.hoverView:nth-child(4) .course-item--card .additional-info,
-  .course-item.hoverView:nth-child(7) .course-item--card .additional-info,
   .course-item.hoverView:nth-child(8) .course-item--card .additional-info {
     left: auto !important;
     right: 100%;
